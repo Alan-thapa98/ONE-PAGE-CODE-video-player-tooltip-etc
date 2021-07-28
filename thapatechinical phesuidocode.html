@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+
+<body>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          :root {
+               --b-a-width: 10vw;
+               --b-a-md-width: 15vw;
+               --b-a-sm-width: 20vw;
+          }
+
+          .main-div {
+               width: 100vw;
+               height: 100vh;
+               background: #3498db;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+
+          }
+
+          h1 {
+               text-align: center;
+               color: #FFF;
+               text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+               position: relative;
+          }
+
+
+          /*
+               h1 {
+               text-align: center;
+               color: #FFF;
+               text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+          }
+           h1::before {
+               content: 'full stak develover';
+               display: block;
+          }
+
+          h1::after {
+               content: 'Billner';
+               display: block;
+          }*/
+          h1::before {
+               content: " ";
+               position: absolute;
+               top: 5%;
+               left: 50%;
+               transform: translateX(-50%);
+               width: var(--b-a-width);
+               border-bottom: 5px solid #2c3e2c;
+          }
+
+          h1::after {
+               content: " ";
+               position: absolute;
+               bottom: -10%;
+               left: 50%;
+               transform: translateX(-50%);
+               width: var(--b-a-width);
+               border-bottom: 5px solid #2c3e2c;
+
+          }
+
+          @media (max-width:768px) {
+               h1::before {
+                    width: var(--b-a-sm-width-width);
+               }
+
+               h1::after {
+                    width: var(--b-a-sm-width);
+               }
+          }
+     </style>
+
+
+
+     <div class="main-div">
+          <h1>Alan thapa</h1>
+     </div>
+
+
+</body>
+
+</html>
